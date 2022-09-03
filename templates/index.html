@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Depression Predictor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<link  rel="icon" href="{{url_for('static', filename='images/dep_icon.png')}}" />
+	</head>
+	<body class="is-preload" style="font-family: sans-serif; background-color: lightblue;">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header" class="container">
+
+					<!-- Logo -->
+						<div>
+						<center><h2 style="color: white;background-color: black;">DEPRESSION STATUS PREDICTOR</h2></center>
+
+					
+			
+
+			<!-- Banner -->
+				<section class="wrapper style1" id="banner">
+					<div class="container"><header>
+						
+					</header></div>
+				</section>
+
+			<!-- Highlights -->
+		
+					<hr>
+				<!-- Gigantic Heading -->
+				<section class="wrapper style2" id="predict">
+					<div class="container">
+						<header class="major">
+							<h2 style="background-color: black; color: white;">Fill the form to predict depression status </h2>
+
+							
+							
+						</header>
+					</div>
+					<section id="main" class="container medium">
+					
+					<div style="background-color:#da70d6;" class="box">
+						<form style="position: relative; text-align: center;" method="POST" action="{{url_for('index')}}">
+							
+								<div class="col-6 col-6-mobilep">
+								Age</br>
+									<input type="number" name="age" step="any" min=3 max="35" value="" placeholder=" 18 to 35 yrs" required/>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								Weekly Study Hour</br>
+								<input type="number" name="stud_hr" step="any" min=1 max="60" value="" placeholder=" 1 to 60 hrs" required/>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								Employment Status</br>
+									
+							    <select name="employed" id="employed" required>
+							    	<option value=""> Choose </option>
+							        <option value="Employed, full time">Employed, full time</option>
+							        <option value="Employed, part time">Employed, part time</option>
+							        <option value="Not employed">Not employed</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								Disability status</br>
+									
+							    <select name="h_disab" id="h_disab" required>
+							    	<option value=""> Choose </option>
+							        <option value="No">No diability</option>
+							        <option value="Prefer not to say">Prefer not to say</option>
+							        <option value="Yes">Yes,there's disability</option>
+							    </select>
+								</div>
+
+								<div class="arrow col-6 col-6-mobilep">
+								Diagonised Mental-health issue</br>
+									
+							    <select name="ment_cond" id="ment_cond" required>
+							    	<option value=""> Choose </option>
+							        <option value="No">None</option>
+							        <option value="Prefer not to say">Prefer not to say</option>
+							        <option value="Yes">Yes</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								Daily Hours on social media</br>
+									 <select name="social_hr" id="social_hr" required>
+							    	<option value=""> Choose </option>
+							        <option value="1-2 hours">1-2 hours</option>
+							        <option value="3-4 hours">3-4 hours</option>
+							        <option value="5+ hours">5+ hours</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								Hours on fitness activities</br>
+									 <select name="fit_hr" id="fit_hr" required>
+							    	<option value=""> Choose </option>
+							    	<option value="0">0 hours</option>
+							        <option value="1-2 hours">1-2 hours</option>
+							        <option value="3-4 hours">3-4 hours</option>
+							        <option value="5+ hours">5+ hours</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								How often is it hard to wind down?</br>
+									 <select name="wind" id="wind" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								How often do you have dryness of the mouth?</br>
+									 <select name="dry_mouth" id="dry_mouth" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-12-mobilep">
+								How difficult is it to feel positive?</br>
+									 <select name="positive" id="positive" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Not difficult</option>
+							        <option value="1">less difficult</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Very difficult</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-12-mobilep">
+								How often do you have breathing difficulty?</br>
+									 <select name="breath_diff" id="breath_diff" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								How often is it difficult to initiate things</br>
+									 <select name="initiate" id="initiate" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								
+								<div class="arrow col-6 col-6-mobilep">
+								How often is there trembling</br>
+										<select name="tremb" id="tremb" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-12-mobilep">
+								Experience of panicking situation</br>
+									<select name="worry" id="worry" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-12-mobilep">
+								How often do you feel not having anything to look forward to</br>
+									<select name="look_fwd" id="look_fwd" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								How often do you feel down-hearted?</br>
+									<select name="down" id="down" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								How often are you enthusiastic about something?</br>
+									<select name="enthus" id="enthus" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+								<div class="arrow col-6 col-6-mobilep">
+								How often do you see life as meaningless?</br>
+									<select name="life_mean" id="life_mean" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+
+								<div class="arrow col-6 col-6-mobilep">
+								How often are you scared for no reason</br>
+									<select name="scared" id="scared" required>
+							    	<option value=""> Choose </option>
+							        <option value="0">Doesn't happen</option>
+							        <option value="1">less frequently</option>
+							        <option value="2">Medium</option>
+							        <option value="3">Frequently</option>
+							    </select>
+								</div>
+							
+								<div class="col-12">
+									<ul class="actions special">
+										<li><input type="submit" value="Predict Depression" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+
+				</section>
+				
+
+
+			<!-- Posts -->
+				
+			<!-- Footer -->
+				<div style="background-color: #d3d4e0;" id="footer">
+					
+
+					
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy;   All rights reserved</li>
+							</ul>
+						</div>
+
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.dropotron.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+		</body>
+</html>

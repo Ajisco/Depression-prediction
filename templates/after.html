@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Result</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<link  rel="icon" href="{{url_for('static', filename='images/dep_icon.png')}}" />
+	</head>
+	<body style="font-family: sans-serif;" class="is-preload">
+
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div>
+						<center><h2 style="color: white;background-color: black;">YOUR PREDICTION RESULT</h2></center>
+
+					
+				</div>
+<br><br>
+										<div align='center'>
+
+											{%if data == "High signs of depression "%}
+											<header>
+												<h2>The person has <span style="color: white; background-color: red;">HIGH</span> signs of DEPRESSION.</h2>
+												
+											</header>
+
+											<br><br><span class="image featured"><img style="max-height: 20em; max-width: 20em;" src="{{url_for('static', filename='images/high_dep.png')}}" alt="" /></span>
+
+											{%elif data == "very Low/low Signs "%}
+											<header>
+												<h2>The person has <span style="color: white; background-color: blue;"> VERY LOW</span> signs of DEPRESSION.</h2>
+												</header>
+
+											<br><br><span class="image featured"><img style="max-height: 25em; max-width: 25em;" src="{{url_for('static', filename='images/very_low.png')}}" alt="" /></span>
+
+											{%elif data == "Low signs of despression "%}
+											<header>
+												<h2>The person has <span style="color: white; background-color: light green;">LOW</span> signs of DEPRESSION.</h2>
+												
+											</header>
+
+											<br><br><span class="image featured"><img style="max-height: 20em; max-width: 20em;" src="{{url_for('static', filename='images/low_dep.png')}}" alt="" /></span>
+
+											{%elif data == "Medium/High "%}
+												<header>
+												<h2>The person has <span style="color: white; background-color:black;">MEDIUM</span>signs of DEPRESSION</h2>
+												
+											</header>
+
+											<br><br><span class="image featured"><img style="max-height: 20em; max-width: 20em;" src="{{url_for('static', filename='images/medium_dep.png')}}" alt="" /></span>
+
+											{%else%}
+											<header>
+												<h2>The person has <span style="color: white; background-color: green;">NO DEPRESSION!</span></h2>
+												
+											</header>
+
+											<br><br><span class="image featured"><img style="max-height: 20em; max-width: 20em;" src="{{url_for('static', filename='images/stdex1.webp')}}" alt="" /></span>
+
+											{%endif%}
+                                         </div>
+
+                                         <div class="container">
+                                       <br><br> <h1>The most important factor that contributed to this prediction was: <span style="color: red;"> <b>{{col_msg[most]}}.</b></span></h1><br><b>Note:</b>This factor might have affected the result positively or negatively.
+
+                               <br><br> <h1>The other important factors (in order of importance) are:</h1> 
+                                    {%for i in next5%}
+                              <span style="color: green;">- {{col_msg[i]}}<br></span>
+                                   {%endfor%}
+
+                                  <hr/>
+                          
+
+
+
+										</div>
+										<footer align='center'>
+												<a href="/" class="button">Go back to Home</a>
+											</footer>
+
+
+
+
+				
+
+			<!-- Main -->
+				
+					
+									<!-- Content -->
+
+
+			<!-- Footer -->
+				
+				<div id="footer">
+					
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; .</a> All rights reserved</li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.dropotron.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+	</body>
+</html>
