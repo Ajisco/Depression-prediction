@@ -14,7 +14,7 @@ The app should also tell the reason for the prediction and how to work on gettin
 <br><br><br>
 
 ## 📍 Data
-The dataset was in a tabular (CSV) format and was gotten frfom kaggle [Here](https://www.kaggle.com/datasets/larsen0966/student-performance-data-set), which was subsequently cleaned and wrangled in preparation for machine learning.<br><br><br>
+The dataset was in a tabular (CSV) format and was gotten from a research studies, which was subsequently cleaned and wrangled in preparation for machine learning.<br><br><br>
 
 
 ## 📍 Skills and Technologies
