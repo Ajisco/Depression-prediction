@@ -32,7 +32,7 @@ The dataset was in a tabular (CSV) format and was gotten from a research studies
 
 ## 📍 APP VIEW
 
-#### [Depression Predictor](https://depressfbi.up.railway.app/)
+#### [Depression Predictor](https://depressfbi.onrender.com)
 | | 
 |:-|
 | <img alt="Depressiion" src="https://github.com/Ajisco/Ajisco/blob/main/images/depress.jpg">|
@@ -54,14 +54,15 @@ The dataset was in a tabular (CSV) format and was gotten from a research studies
 
 ## 📍 DEPLOYMENT 🚀
 
-#### This app is deployed at [Render](https://railway.app/)
+#### This app is deployed at [Render](https://render.com)
 	
-#### You can access it [Here](https://depressfbi.up.railway.app/) <br><br><br>
+#### You can access it [Here](https://depressfbi.onrender.com) <br><br><br>
 
 
 ## 📍 Limitations
 1. The dataset used was not large enough, could be outdated and can't be said to have generalized well despite the high metric values.
-2. The app's interface could be better.<br><br><br>
+2. The app's interface could be better.
+3. The app loads slowly.<br><br><br>
 
 ## 📍 To improve
 1. I would love to improve the dataset in size and quality.
